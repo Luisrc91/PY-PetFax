@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css" />
     <title>User Fax</title>
   </head>
   <body>
-    <h1>Facts Page</h1>
-    {% for fact in facts %}
-    <h3>Submited by: {{ fact.submitter }}</h3>
-    "{{ fact.fact }}" {% endfor %}
-
-    <a href="/facts/new">go back</a>
-    <a href="/pets">go home</a>
-</div>
+    <div class="container">
+      <h1>Facts Page</h1>
+      {% for fact in facts %}
+      <h3>Submitted by: {{ fact.submitter }}</h3>
+      "{{ fact.fact }}" {% endfor %}
+      <div>
+        <a href="/facts/new">go back</a>
+        <a href="/pets">go home</a>
+      </div>
+    </div>
   </body>
 </html>

@@ -9,25 +9,24 @@
   </head>
   <body>
     <div class="container">
-      <div>
-        <h1>Welcome to PetFax</h1>
+      <h1>PetFax</h1>
+      <div class="callout">
+        Welcome to PetFax! We are a no-kill shelter dedicated to finding our
+        pets loving homes and educating the public with fun facts.
       </div>
-      
-      <div class="imgContainer">
-          {% for pet in pets %}
-        <div class="name">
+      <div class="pets-container">
+        {% for pet in pets %}
+        <div class="pet">
           <h2>{{ pet.pet_name }}</h2>
-        </div>
-        <div class="imgage">
-          <img src="{{ pet.pet_photo }}" alt="{{pet.pet_name}}"  />
-          <a href="/pets/{{pet.pet_id}}">Click me</a>
+          <img src="{{pet.pet_photo}}" />
+          <a href="/pets/{{ pet.pet_id }}">Learn more ⟩</a>
         </div>
         {% endfor %}
-        <div>
-          <a href="/facts/new">Submit Facts.</a>
-          <a href="/facts">View Facts</a>
       </div>
-
+      <div class="callout">
+        We'd love to learn more fun facts!
+        <a href="/facts/new">Submit some here.</a>
+        <a href="/facts">View Facts</a>
       </div>
     </div>
   </body>
